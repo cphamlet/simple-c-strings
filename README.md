@@ -1,5 +1,5 @@
 # Simple C Strings
-A simple C string library. 
+A dead simple C string library.
 
 Pros:
 
@@ -9,10 +9,12 @@ Pros:
 
 ## Getting Started:
 
+Include this header in your C file.
 ```
-#include "stringObj.c"
+#include "stringObj.h"
 ```
 
+Compile stringObj.c as a separate file. 
 ```
 gcc main.c stringObj.c -o main
 ```
@@ -26,6 +28,7 @@ typedef struct {
     char * str;
 } String;
 ```
+Here are the following functions:
 
 ```
 //Allocates a new string struct. 
@@ -50,12 +53,14 @@ int str_indexOf(String * str_struct, char chr);
 //Allocates a new string, concatonates both objs. Note that you need to free the returned pointer
 String * str_concat(String * begin, String * end);
 
+
 //For concatonating a literal. 
 String * str_concat_lit(String * begin, char * end);
 
 
-//Sub string from begin (inclusive) to end (exclusive)
+//Return Sub string from begin (inclusive) to end (exclusive)
 String * str_substr(String * str_struct, size_t begin, size_t end);
+
 
 //Prints the contents of the string struct. 
 void str_print(String * str_struct);
