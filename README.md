@@ -6,6 +6,7 @@ Pros:
 1. Safe from buffer overflows.
 2. Useful stdlib functions.
 3. Length attribute allows faster function calls (such as equals function).
+4. Allows string lengths greater than MAX_INT
 
 ## Getting Started:
 
