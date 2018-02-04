@@ -135,9 +135,9 @@ String * str_reverse(String * str_struct){
   new_str->str = (char *) malloc(sizeof(char)*str_struct->length);
   size_t len = str_struct->length;
   size_t i = 0;
-  while(len >= 0){
-    new_str->str[i++] = str_struct->str[len--];
-  }
+  do{
+     new_str->str[i++] = str_struct->str[--len];
+  }while(len > 0);
   return new_str;
 }
 
